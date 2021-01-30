@@ -1,0 +1,55 @@
+<!-- aq - admin-question -->
+<div class="aq">
+    <div [className]="mode == 'oneAns' ? 'aq_header':'aq_header text'">
+        <input type="text" placeholder="Вопрос" name="title" [(ngModel)]="adminQuestionModel.title">
+        <div class="aq_header__select">
+            <div class="aq_header__select___item">
+                <span [className]="mode == 'oneAns' ? 'material-icons active':'material-icons'"
+                    (click)="onModeSelect('oneAns')">
+                    done
+                </span>
+            </div>
+            <div class="aq_header__select___item">
+                <span [className]="mode == 'textAns' ? 'material-icons active':'material-icons'"
+                    (click)="onModeSelect('textAns')">
+                    spellcheck
+                </span>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="mode == 'oneAns'">
+        <div class="aq_body">
+            <div class="aq_body__wrapper">
+                <div *ngFor="let o of adminQuestionModel.optionList">
+                    <div class="aq_body__item">
+                        <div class="aq_body__item___label">
+                            <input type="text" placeholder="Вариант ответа" name="name"
+                                [(ngModel)]="adminQuestionModel.optionList[adminQuestionModel.optionList.indexOf(o)].name">
+                        </div>
+                        <div class="aq_body__item___state">
+                            <span [className]="o.status ? 'material-icons active':'material-icons'"
+                                (click)="onStatusChange(o)">
+                                thumb_up_alt
+                            </span>
+                        </div>
+                        <div class="aq_body__item___state">
+                            <span class="material-icons" (click)="onDeleteOption(o)">
+                                clear
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="aq_body__add">
+                <div class="aq_body__add___content" (click)="onAddOption()">
+                    Добавить вариант
+                </div>
+            </div>
+        </div>
+    </div>
+    <div [className]="done ? 'aq_submit done':'aq_submit'" (click)="onSubmit()">
+        <span class="material-icons">
+            add
+        </span>
+    </div>
+</div>

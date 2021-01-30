@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div *ngIf="end">
+    <div class="end">
+        <div class="test_title">Спасибо за участие в опросе {{test.title}}!</div>
+    </div>
+</div>
+<div class="test">
+    <div class="test_title">{{test.title}}</div>
+    <div *ngFor="let p of personal">
+        <app-question-card [question]="p" (outputEmail)="getEmail($event)" (outputToParent)="getFromChild($event)"></app-question-card>
+    </div>
+    <div *ngFor="let s of second">
+        <app-question-card [question]="s" (outputToParent)="getFromChild($event)"></app-question-card>
+    </div>
+    <div *ngFor="let t of third">
+        <app-question-card [question]="t" (outputToParent)="getFromChild($event)"></app-question-card>
+    </div>
+    <div class="test_button" (click)="onSend()">Отправить результат</div>
+</div>

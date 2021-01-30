@@ -1,0 +1,11 @@
+<div class="as">    
+    <div class="as_item">
+        <app-admin-question-item (outputToParent)="getOutputValue($event)"></app-admin-question-item>
+    </div>
+    <div *ngFor="let q of questionList">
+        <app-admin-question-item (onDelete)="onDeleteQuestion($event)" (outputToParent)="getOutputValue($event)"></app-admin-question-item>
+    </div>
+    <div class="new" (click)="onAdd()">
+        Далее
+    </div>
+</div>

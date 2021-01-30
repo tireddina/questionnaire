@@ -1,0 +1,11 @@
+<div class="header">
+    <div *ngIf="!logged">
+        <div class="header_login" routerLink="/login">Войти</div>
+    </div>
+    <div *ngIf="logged">
+        <div class="header_login" (click)="onLogout()">Выйти</div>
+    </div>
+    <div>
+        <div class="header_login" routerLink="/registration">Регистрация</div>
+    </div>
+</div>

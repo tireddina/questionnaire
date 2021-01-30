@@ -1,0 +1,32 @@
+.header {
+    height: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 11;
+    justify-content: center;
+    grid-gap: 3rem;
+    background: rgb(226, 226, 226);
+}
+.h_item {
+    margin-top: 5px;
+    color: #4e4e4e;
+    cursor: pointer;
+    transition: 0.2s;
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgb(226, 226, 226);
+}
+.h_item:hover {
+    color: #000;
+    border-bottom: 2px solid #506ff8;
+    transition: 0.2s;
+}
+.active {
+    color: #000;
+    border-bottom: 2px solid #002beb;
+    transition: 0.2s;
+}

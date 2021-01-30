@@ -1,0 +1,19 @@
+<div class="al">
+    <div *ngFor="let l of list">
+        <div class="al_item" routerLink="/admin/detailed/{{l._id}}">
+            <p>
+                {{l.title}}
+            </p>
+            <div class="al_item__delete">
+                <span class="material-icons" (click)="onDelete(l._id)">
+                    delete
+                </span>
+            </div>
+            <!-- <div class="al_item__delete">
+                <span class="material-icons" (click)="onDelete(l._id)">
+                    create
+                </span>
+            </div> -->
+        </div>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<div class="qc">
+    <div class="qc_title">
+        {{question.title}}
+    </div>
+    <div *ngIf="question.mode == 'textAns'">
+        <div class="qc_body">
+            <input type="text" placeholder="Ваш ответ пж" name="ans" [(ngModel)]="answers.ans" (blur)="onSendToParent()">
+        </div>
+    </div>
+    <div *ngIf="question.mode == 'oneAns'">
+        <div class="qc_body">
+            <div *ngFor="let o of question.optionList">
+                <div class="qc_body__item">
+                    <input type="radio" name="{{question.title}}" [(ngModel)]="answers.ans" value={{o.name}} (change)="onSendToParentRadio()">
+                    {{o.name}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

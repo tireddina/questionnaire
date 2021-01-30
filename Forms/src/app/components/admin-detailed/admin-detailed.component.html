@@ -1,0 +1,12 @@
+<div class="detail">
+    <div *ngFor="let a of ansList">
+        <div class="detail_item" routerLink="/admin/respons/{{a._id}}">
+            <p>
+                {{a.email}}
+            </p>
+            <p>
+                {{a.mark}} из {{a.fullMark}}
+            </p>
+        </div>
+    </div>
+</div>

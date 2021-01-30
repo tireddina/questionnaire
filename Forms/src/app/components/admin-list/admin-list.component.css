@@ -1,0 +1,20 @@
+.al {
+    display: grid;
+    grid-gap: 1rem;
+}
+.al_item {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr auto;
+    background: #f0f0f0;
+    padding: 0 1rem;
+    align-items: center;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.al_item span {
+    color: #868686;
+}
+.al_item span:hover {
+    color: #000;
+}

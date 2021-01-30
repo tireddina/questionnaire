@@ -1,0 +1,15 @@
+.side {
+    height: 100%;
+    display: grid;
+    align-content: center;
+    background: #f0f0f0;
+    padding: 1rem;
+}
+.side_item {
+    padding: 10px 1rem;
+    cursor: pointer;
+    color: #868686;
+}
+.side_item:hover {
+    color: #000;
+}

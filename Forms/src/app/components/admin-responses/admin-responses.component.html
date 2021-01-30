@@ -1,0 +1,31 @@
+<div class="res">
+    <div *ngFor="let q of questionCards">
+        <div *ngIf="q.answer == q.correct">
+            <div class="res_item__correct">
+                <p class="question">{{q.title}}</p>
+                <p>{{q.answer}}</p>
+                <span class="material-icons">
+                    check
+                </span>
+            </div>
+        </div>
+
+        <div *ngIf="q.answer != q.correct && q.mode != 'textAns'">
+            <div class="res_item__incorrect">
+                <p class="question">{{q.title}}</p>
+                <p>{{q.answer}}</p>
+                <p>Правильный ответ: {{q.correct}}</p>
+                <span class="material-icons">
+                    warning
+                </span>
+            </div>
+        </div>
+
+        <div *ngIf="q.mode == 'textAns'">
+            <div class="res_item">
+                <p class="question">{{q.title}}</p>
+                <p>{{q.answer}}</p>
+            </div>
+        </div>
+    </div>
+</div>

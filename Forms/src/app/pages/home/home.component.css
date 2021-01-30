@@ -1,0 +1,11 @@
+.home {
+    display: grid;
+    grid-gap: 1rem;
+    padding: 1rem 20%;
+}
+.q_item {
+    padding: 1rem;
+    background: #f0f0f0;
+    border-radius: 5px;
+    cursor: pointer;
+}

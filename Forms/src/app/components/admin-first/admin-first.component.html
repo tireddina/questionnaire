@@ -1,0 +1,10 @@
+<div class="af">
+    <div class="af_title">Добро пожаловать на создание опросника {{title}}</div>
+    <input type="text" placeholder="Название опросника" name="title" [(ngModel)]="title">
+    <div *ngFor="let p of personal">
+        <app-admin-question-item [value]="p"></app-admin-question-item>
+    </div>
+    <div class="new" (click)="onAdd()">
+        Далее
+    </div>
+</div>

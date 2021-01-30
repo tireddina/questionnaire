@@ -1,0 +1,10 @@
+<div class="login">
+    <div class="login_title">Войти</div>
+    <div class="login_item">
+        <input type="text" placeholder="Email" name="email" [(ngModel)]="userModel.email">
+    </div>
+    <div class="login_item">
+        <input type="password" placeholder="Пароль" name="password" [(ngModel)]="userModel.password">
+    </div>
+    <div class="login_button" (click)="onLogin()">Войти</div>
+</div>

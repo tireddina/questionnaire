@@ -1,0 +1,28 @@
+.qc {
+    padding: 1rem;
+    background: #f0f0f0;
+    display: grid;
+    border-radius: 5px;
+    grid-gap: 1rem;
+}
+.qc_title {
+    font-size: 18px;
+}
+.qc_body {
+    display: grid;
+}
+input {
+    height: 30px;
+    border: 0;
+    border-radius: 5px;
+    margin: 0;
+    padding: 0 1rem;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+.qc_body__item {
+    grid-template-columns: auto 1fr;
+    grid-gap: 1rem;
+    display: grid;
+    align-items: center;
+}

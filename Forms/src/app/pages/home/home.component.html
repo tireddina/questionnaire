@@ -1,0 +1,8 @@
+<app-header></app-header>
+<div class="home">
+    <div *ngFor="let q of questionList">
+        <div class="q_item" routerLink="/test/{{q._id}}">
+            {{q.title}}
+        </div>
+    </div>
+</div>
